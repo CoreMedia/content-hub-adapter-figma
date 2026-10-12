@@ -1,0 +1,47 @@
+{
+  "name": "@coremedia-blueprint/studio-client.main.content-hub-figma-studio",
+  "author": "CoreMedia GmbH",
+  "version": "1.0.0-SNAPSHOT",
+  "license": "CoreMedia Open Source License",
+  "dependencies": {
+    "@coremedia/studio-client.client-core": "catalog:",
+    "@coremedia/studio-client.content-hub-models": "catalog:",
+    "@coremedia/studio-client.ext.ui-components": "catalog:",
+    "@coremedia/studio-client.main.content-hub-editor-components": "catalog:",
+    "@coremedia/studio-client.main.editor-components": "catalog:",
+    "@jangaroo/ext-ts": "catalog:",
+    "@jangaroo/runtime": "catalog:"
+  },
+  "devDependencies": {
+    "@coremedia/studio-client.ext.eslint-config": "catalog:",
+    "@jangaroo/build": "catalog:",
+    "@jangaroo/core": "catalog:",
+    "eslint": "catalog:",
+    "rimraf": "catalog:"
+  },
+  "scripts": {
+    "clean": "rimraf ./dist && rimraf ./build",
+    "build": "jangaroo build",
+    "watch": "jangaroo watch",
+    "lint": "eslint"
+  },
+  "exports": {
+    "./*": {
+      "types": "./src/*.ts",
+      "default": "./dist/src/*.js"
+    }
+  },
+  "coremedia": {
+    "projectExtensionFor": "studio-client.main"
+  },
+  "publishConfig": {
+    "directory": "dist",
+    "linkDirectory": false,
+    "exports": {
+      "./*": {
+        "types": "./src/*.d.ts",
+        "default": "./src/*.js"
+      }
+    }
+  }
+}
