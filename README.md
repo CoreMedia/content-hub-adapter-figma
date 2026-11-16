@@ -1,9 +1,23 @@
+![CoreMedia Labs Logo](https://documentation.coremedia.com/badges/banner_coremedia_labs_wide.png "CoreMedia Labs Logo")
+
+![CoreMedia Content Cloud Version](https://img.shields.io/static/v1?message=2512.1.1&label=CoreMedia%20Content%20Cloud&style=for-the-badge&labelColor=666666&color=672779
+"This badge shows the CoreMedia version this project is compatible with.
+Please read the versioning section of the project to see what other CoreMedia versions are supported and how to find them."
+)
+![Status](https://img.shields.io/static/v1?message=active&label=Status&style=for-the-badge&labelColor=666666&color=2FAC66
+"The status badge describes if the project is maintained. Possible values are active and inactive.
+If a project is inactive it means that the development has been discontinued and won't support future CoreMedia versions."
+)
+
+
 # Figma Extension for CoreMedia Content Hub
 
 A CoreMedia Blueprint extension that connects Figma to the Studio **Content Hub**. Editors can browse Figma teams,
 folders, files and pages in the Studio library and import components as content. A graphical **mapping editor**
 defines how a Figma component becomes CoreMedia content: which layers fill which properties, which linked contents
 are created, and which viewtype they use.
+
+![Figma extension in Studio](documentation/img/Figma-1.png)
 
 ## Modules
 
@@ -96,6 +110,8 @@ Notes:
     `GET /v1/files/:key/nodes`). **Save** writes the transform description.
 
 `MappingGraph` converts between the graph model and the transform description format.
+
+![Figma extension mapping editor](documentation/img/Figma-mapping.png)
 
 ### REST backend
 
